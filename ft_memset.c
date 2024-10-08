@@ -1,32 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 09:38:53 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/08 10:18:51 by dalbano          ###   ########.fr       */
+/*   Created: 2024/10/08 10:26:30 by dalbano           #+#    #+#             */
+/*   Updated: 2024/10/08 11:00:19 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+#include <stdio.h>
+#include <string.h>
+
+void	*ft_memset(void *s, int c, size_t n)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	unsigned char	*str;
+	size_t			temp;
+
+	str = (unsigned char *)s;
+	temp = -1;
+	while (++temp < n)
+	{
+		str[temp] = c;
+	}
+	return (s);
 }
 
-// #include <stdio.h>
-// #include <ctype.h>
 // int main(void)
 // {
-// 	int c = '0';
-// 	int i = 'A';
-// 	int a = '-';
-// 	printf("%d %d\n", ft_isalnum(c), c);
-// 	printf("%d %d\n\n", isalnum(c), c);
-// 	printf("%d %d\n", ft_isalnum(i), i);
-// 	printf("%d %d\n\n", isalnum(i), i);
-// 	printf("%d %d\n", ft_isalnum(a), a);
-// 	printf("%d %d\n\n", isalnum(a), a);
+// 	char str[] = "almost every programmer should know memset!";
+// 	ft_memset (str,'-',6);
+// 	puts (str);
+// 	printf("\n");
+// 	char str1[] = "almost every programmer should know memset!";
+// 	memset (str1,'-',6);
+// 	puts (str1);
 // 	return 0;
 // }
