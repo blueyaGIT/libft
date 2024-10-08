@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:40:17 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/07 17:41:42 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/08 10:15:39 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,4 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	}
 	dest[length] = '\0';
 	return (src_length);
-}
-
-int	ft_strlen(char *str)
-{
-	int		str_length;
-
-	str_length = 0;
-	while (str[str_length] != '\0')
-	{
-		str_length++;
-	}
-	return (str_length);
 }
