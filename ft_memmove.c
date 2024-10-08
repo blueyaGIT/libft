@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 12:24:37 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/08 12:43:16 by dalbano          ###   ########.fr       */
+/*   Created: 2024/10/08 12:31:23 by dalbano           #+#    #+#             */
+/*   Updated: 2024/10/08 12:43:46 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <string.h>
 
-void	*ft_memcpy(void *dest_str, const void *src_str, size_t n)
+void	*memmove(void *dest_str, const void *src_str, size_t numBytes)
 {
 	size_t		temp;
 	char		*dest;
@@ -22,22 +21,22 @@ void	*ft_memcpy(void *dest_str, const void *src_str, size_t n)
 	temp = -1;
 	dest = (char *)dest_str;
 	src = (const char *)src_str;
-	while (++temp < n)
+	while (++temp < numBytes)
 	{
 		dest[temp] = src[temp];
 	}
 	return (dest_str);
 }
 
-// int main()
+// #include <stdio.h>
+// #include <string.h>
+
+// int main () 
 // {
-//     const char src[50] = "Tutorialspoint";
-//     char dest[50];
-//     strcpy(dest, "Heloooo!!");
-//     printf("Before memcpy dest = %s\n", dest);
-
-//     ft_memcpy(dest, src, strlen(src) + 1);
-
-//     printf("After memcpy dest = %s\n", dest);
-//     return 0;
+//    char dest_str[] = "oldstring";
+//    const char src_str[]  = "newstring";
+//    printf("Before memmove dest = %s, src = %s\n", dest_str, src_str);
+//    memmove(dest_str, src_str, 9);
+//    printf("After memmove dest = %s, src = %s\n", dest_str, src_str);
+//    return(0);
 // }
