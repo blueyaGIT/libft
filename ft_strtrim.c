@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 18:16:34 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/09 19:33:52 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/09 19:34:47 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	is_in_set(char c, const char *set)
 {
 	while (*set)
 	{
-		if (c == *set) test
+		if (c == *set)
 			return (1);
 		set++;
 	}
