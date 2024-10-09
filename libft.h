@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:03:11 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/09 18:33:52 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/09 20:13:50 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int				ft_tolower(int c);
 int				ft_toupper(int c);
 int				ft_countwords(char *str);
 int				ft_memcmp(const void *ptr1, const void *ptr2, size_t n);
+int				ft_all_length(int size, char **strs, char *sep);
 void			*ft_memchr(const void *ptr, int c, size_t n);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dest_str, const void *src_str, size_t n);
@@ -47,6 +48,7 @@ void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 char			*ft_strchr(const char *str, int c);
 char			*ft_strrchr(const char *str, int c);
+char			*ft_strjoin(int size, char **strs, char *sep);
 char			*ft_strdup(char *src);
 char			*ft_strdup_const(const char *src);
 char			*ft_strstr(char *str, char *to_find);
