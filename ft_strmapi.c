@@ -6,13 +6,13 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:22:12 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/09 10:44:21 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/09 11:11:12 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	static	ft_strlen_const(const char *str)
+int static	ft_strlen_const(const char *str)
 {
 	int		str_length_da;
 
@@ -32,19 +32,21 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = -1;
 	if (s == NULL || f == NULL)
 		return (NULL);
-	memory = malloc(ft_strlen_const(s));
+	memory = malloc((ft_strlen_const(s) + 1) * sizeof(char));
 	if (!memory)
 		return (NULL);
-	ft_strcpy(memory, s);
-	while (memory[++i])
-		memory[i] = (*f)(i, memory[i]);
+	while (s[++i])
+		memory[i] = (*f)(i, s[i]);
+	memory[i] = '\0';
 	return (memory);
 }
 
 char modify_char(unsigned int i, char c)
 {
-    // Simple transformation: add the index to the character
-    return c + i;
+	i = 32;
+    if (c >= 'a' && c <= 'z')  // If character is lowercase
+        return c - i;
+	return c;
 }
 
 int main(void)
