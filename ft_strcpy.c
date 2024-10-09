@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/07 17:40:17 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/09 10:20:53 by dalbano          ###   ########.fr       */
+/*   Created: 2024/10/09 10:41:02 by dalbano           #+#    #+#             */
+/*   Updated: 2024/10/09 10:43:30 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+char	*ft_strcpy(char *dest, const char *src)
 {
-	int	length;
-	int	src_length;
+	char	*ptr;
 
-	length = 0;
-	src_length = ft_strlen(src);
-	while (length < size - 1 && src[length] != '\0')
+	ptr = dest;
+	while (*src != '\0')
 	{
-		dest[length] = src[length];
-		length = length + 1;
+		*ptr++ = *src++;
 	}
-	dest[length] = '\0';
-	return (src_length);
+	*ptr = '\0';
+	return (dest);
 }

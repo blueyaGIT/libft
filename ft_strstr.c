@@ -6,9 +6,11 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:36:03 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/07 17:41:31 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/09 10:20:53 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <libft.h>
 
 char	*ft_strstr(char *str, char *to_find)
 {

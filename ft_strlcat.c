@@ -6,12 +6,13 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:35:37 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/08 10:15:42 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/09 10:17:29 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <libft.h>
+
 char			*ft_strncat(char *dest, char *src, unsigned int nb);
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {

@@ -1,29 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/07 17:40:17 by dalbano           #+#    #+#             */
+/*   Created: 2024/10/09 09:41:23 by dalbano           #+#    #+#             */
 /*   Updated: 2024/10/09 10:20:53 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	length;
-	int	src_length;
-
-	length = 0;
-	src_length = ft_strlen(src);
-	while (length < size - 1 && src[length] != '\0')
+	if (n == -2147483648)
 	{
-		dest[length] = src[length];
-		length = length + 1;
+		write(fd, "-2147483648", 11);
+		return ;
 	}
-	dest[length] = '\0';
-	return (src_length);
+	if (n < 0)
+	{
+		n *= -1;
+		write(fd, "-", 1);
+	}
+	if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+	}
+	write(fd, &"0123456789"[n % 10], 1);
 }
+
+// int main()
+// {
+//     int fd = 1; // Standard output, but can be any file descriptor
+//     ft_putnbr_fd(-12345, fd);
+//     return 0;
+// }

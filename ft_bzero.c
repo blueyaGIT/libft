@@ -6,12 +6,11 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 10:42:35 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/08 10:58:38 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/09 10:20:53 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <strings.h>
+#include <libft.h>
 
 void	ft_bzero(void *s, size_t n)
 {

@@ -6,9 +6,11 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:37:11 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/07 17:41:34 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/09 10:09:53 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <libft.h>
 
 int	ft_atoi(char *str)
 {

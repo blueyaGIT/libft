@@ -6,12 +6,11 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 12:24:37 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/08 12:43:16 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/09 10:20:53 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include <libft.h>
 
 void	*ft_memcpy(void *dest_str, const void *src_str, size_t n)
 {

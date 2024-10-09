@@ -6,11 +6,11 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 16:37:11 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/08 16:39:35 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/09 10:13:00 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <libft.h>
 
 int	ft_memcmp(const void *ptr1, const void *ptr2, size_t n)
 {
