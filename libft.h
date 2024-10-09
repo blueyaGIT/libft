@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:03:11 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/09 12:37:03 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/09 18:33:52 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,11 @@ char			*ft_strstr(char *str, char *to_find);
 char			*ft_strnstr(const char *src, const char *to_find, size_t len);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strcpy(char *dest, const char *src);
+char			*ft_strncpy(char *dest, char *src, unsigned int n);
 char			*ft_itoa(int n);
 char			*ft_malloc_str(char *str);
+char			*ft_strtrim(char const *s1, char const *set);
+char			**ft_split(char const *s, char c);
 
 unsigned char	ft_strlcat(char *dest, char *src, unsigned int size);
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
