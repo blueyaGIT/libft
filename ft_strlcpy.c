@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:40:17 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/10 10:16:50 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/10 10:24:17 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int	length;
-	int	src_length;
+	unsigned int	length;
+	int				src_length;
 
 	length = 0;
 	src_length = ft_strlen(src);

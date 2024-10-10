@@ -6,13 +6,13 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:22:12 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/09 11:11:12 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/10 10:25:04 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int static	ft_strlen_const(const char *str)
+static int	ft_strlen_const_special(const char *str)
 {
 	int		str_length_da;
 
@@ -32,7 +32,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = -1;
 	if (s == NULL || f == NULL)
 		return (NULL);
-	memory = malloc((ft_strlen_const(s) + 1) * sizeof(char));
+	memory = malloc((ft_strlen_const_special(s) + 1) * sizeof(char));
 	if (!memory)
 		return (NULL);
 	while (s[++i])
