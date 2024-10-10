@@ -43,9 +43,10 @@ SRCS =	ft_all_length.c \
 		ft_strtrim.c \
 		ft_tolower.c \
 		ft_toupper.c
-OBJS = $(SRCS:.c=.o)
-INCLUDES = -I./includes
 
+HEAD = ./includes
+
+OBJS = $(SRCS:.c=.o)
 # Compile the library
 $(NAME): $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
