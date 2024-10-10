@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 20:13:07 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/09 20:13:32 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/10 10:09:50 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,26 @@
 
 int	ft_all_length(int size, char **strs, char *sep)
 {
-	int	i;
-	int	length;
 	int	temp;
+	int	length;
+	int	sep_length;
 
-	i = 0;
-	temp = 0;
+	sep_length = 0;
 	length = 0;
-	while (sep[i] != '\0')
+	temp = 0;
+	while (sep[temp] != '\0')
 	{
+		sep_length++;
 		temp++;
-		i++;
 	}
-	i = 0;
-	while (i < size)
+	temp = 0;
+	while (temp < size)
 	{
-		length += ft_strlen(strs[i]);
-		i++;
+		length += ft_strlen(strs[temp]);
+		temp++;
 	}
-	return (length += temp);
+	if (size > 1)
+		length += sep_length * (size - 1);
+
+	return (length);
 }

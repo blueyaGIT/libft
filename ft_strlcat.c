@@ -6,11 +6,11 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:35:37 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/09 10:17:29 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/10 10:16:50 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char			*ft_strncat(char *dest, char *src, unsigned int nb);
 

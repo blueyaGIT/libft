@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:03:11 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/09 20:13:50 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/10 10:11:55 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,4 @@ unsigned char	ft_strlcat(char *dest, char *src, unsigned int size);
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
 size_t			ft_strlen(char *str);
 size_t			ft_strlen_const(const char *str);
-#endif
+#endif /* LIBFT_H */
