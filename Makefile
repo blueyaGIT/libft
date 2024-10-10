@@ -44,6 +44,7 @@ SRCS =	ft_all_length.c \
 		ft_tolower.c \
 		ft_toupper.c
 OBJS = $(SRCS:.c=.o)
+INCLUDES = -I./includes
 
 # Compile the library
 $(NAME): $(OBJS)
@@ -65,3 +66,5 @@ fclean: clean
 
 # Rebuild everything
 re: fclean all
+
+.PHONY: all clean fclean re
