@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:22:12 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/11 10:55:12 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:59:43 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (memory);
 }
 
-static char	modify_char(unsigned int i, char c)
-{
-	i = 32;
-	if (c >= 'a' && c <= 'z')
-		return (c - i);
-	return (c);
-}
+// static char	modify_char(unsigned int i, char c)
+// {
+// 	i = 32;
+// 	if (c >= 'a' && c <= 'z')
+// 		return (c - i);
+// 	return (c);
+// }
