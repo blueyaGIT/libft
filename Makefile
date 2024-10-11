@@ -2,55 +2,65 @@
 NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-SRCS =	ft_all_length.c \
-		ft_atoi.c \
-		ft_bzero.c \
-		ft_countwords.c \
-		ft_isalnum.c \
-		ft_isalpha.c \
-		ft_isascii.c \
-		ft_isdigit.c \
-		ft_isprint.c \
-		ft_isspace.c \
-		ft_itoa.c \
-		ft_malloc_str.c \
-		ft_memchr.c \
-		ft_memcmp.c \
-		ft_memcpy.c \
-		ft_memmove.c \
-		ft_memset.c \
-		ft_putchar_fd.c \
-		ft_putendl_fd.c \
-		ft_putnbr_fd.c \
-		ft_putstr_fd.c \
-		ft_split.c \
-		ft_strchr.c \
-		ft_strcpy.c \
-		ft_strdup.c \
-		ft_strdup_const.c \
-		ft_striteri.c \
-		ft_strjoin.c \
-		ft_strlcat.c \
-		ft_strlcpy.c \
-		ft_strlen.c \
-		ft_strlen_const.c \
-		ft_strmapi.c \
-		ft_strncmp.c \
-		ft_strncpy.c \
-		ft_strnstr.c \
-		ft_strrchr.c \
-		ft_strstr.c \
-		ft_strtrim.c \
-		ft_tolower.c \
-		ft_toupper.c
 
-HEAD = ./includes
+# Source directory and include directory
+SRCDIR = srcs
+INCDIR = includes
 
+# List of source files
+SRCS =	$(SRCDIR)/ft_all_length.c \
+		$(SRCDIR)/ft_atoi.c \
+		$(SRCDIR)/ft_bzero.c \
+		$(SRCDIR)/ft_countwords.c \
+		$(SRCDIR)/ft_isalnum.c \
+		$(SRCDIR)/ft_isalpha.c \
+		$(SRCDIR)/ft_isascii.c \
+		$(SRCDIR)/ft_isdigit.c \
+		$(SRCDIR)/ft_isprint.c \
+		$(SRCDIR)/ft_isspace.c \
+		$(SRCDIR)/ft_itoa.c \
+		$(SRCDIR)/ft_malloc_str.c \
+		$(SRCDIR)/ft_memchr.c \
+		$(SRCDIR)/ft_memcmp.c \
+		$(SRCDIR)/ft_memcpy.c \
+		$(SRCDIR)/ft_memmove.c \
+		$(SRCDIR)/ft_memset.c \
+		$(SRCDIR)/ft_putchar_fd.c \
+		$(SRCDIR)/ft_putendl_fd.c \
+		$(SRCDIR)/ft_putnbr_fd.c \
+		$(SRCDIR)/ft_putstr_fd.c \
+		$(SRCDIR)/ft_split.c \
+		$(SRCDIR)/ft_strchr.c \
+		$(SRCDIR)/ft_strcpy.c \
+		$(SRCDIR)/ft_strdup.c \
+		$(SRCDIR)/ft_strdup_const.c \
+		$(SRCDIR)/ft_striteri.c \
+		$(SRCDIR)/ft_strjoin.c \
+		$(SRCDIR)/ft_strlcat.c \
+		$(SRCDIR)/ft_strlcpy.c \
+		$(SRCDIR)/ft_strlen.c \
+		$(SRCDIR)/ft_strlen_const.c \
+		$(SRCDIR)/ft_strmapi.c \
+		$(SRCDIR)/ft_strncmp.c \
+		$(SRCDIR)/ft_strncpy.c \
+		$(SRCDIR)/ft_strnstr.c \
+		$(SRCDIR)/ft_strrchr.c \
+		$(SRCDIR)/ft_strstr.c \
+		$(SRCDIR)/ft_strtrim.c \
+		$(SRCDIR)/ft_tolower.c \
+		$(SRCDIR)/ft_toupper.c
+
+# Objects files
 OBJS = $(SRCS:.c=.o)
+
 # Compile the library
 $(NAME): $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
 	@echo "Library $(NAME) created."
+
+# Rule for compiling .c files into .o files
+%.o: %.c
+	$(CC) $(CFLAGS) -I $(INCDIR) -c $< -o $@
 
 # Default rule
 all: $(NAME)
