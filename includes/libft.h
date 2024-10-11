@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:03:11 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/11 10:21:31 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:42:24 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 char			*ft_strchr(const char *str, int c);
 char			*ft_strrchr(const char *str, int c);
+char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(int size, char **strs, char *sep);
 char			*ft_strdup(char *src);
 char			*ft_strdup_const(const char *src);

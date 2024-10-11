@@ -6,11 +6,11 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 10:26:30 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/11 10:16:48 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:55:12 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "../includes/libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {
