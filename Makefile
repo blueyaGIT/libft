@@ -55,7 +55,8 @@ SRCS =	$(SRCDIR)/ft_all_length.c \
 
 BSRCS = $(BSRCDIR)/ft_lstnew.c \
 		$(BSRCDIR)/ft_lstadd_front.c \
-		$(BSRCDIR)/ft_lstsize.c 
+		$(BSRCDIR)/ft_lstsize.c \
+		$(BSRCDIR)/ft_lstlast.c 
 
 # Objects files
 OBJS = $(SRCS:.c=.o)

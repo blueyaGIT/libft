@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:03:11 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/11 13:33:19 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/11 13:44:30 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ typedef struct s_list
 }					t_list;
 
 t_list			*ft_lstnew(void *content);
+t_list			*ft_lstlast(t_list *lst);
 int				ft_lstsize(t_list *lst);
 void			ft_lstadd_front(t_list **lst, t_list *new);
 
