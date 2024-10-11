@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 16:47:59 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/11 10:16:48 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:18:19 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strnstr(const char *src, const char *to_find, size_t len)
 	i = -1;
 	while (++i < len && src[i] != '\0')
 	{
-		j = -1; 
+		j = -1;
 		while (to_find[++j] != '\0' && (i + j) < len)
 		{
 			if (src[i + j] != to_find[j])

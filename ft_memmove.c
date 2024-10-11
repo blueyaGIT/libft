@@ -6,36 +6,36 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 12:31:23 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/11 10:16:48 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:23:11 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-void	*ft_memmove(void *dest_str, const void *src_str, size_t numBytes)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t		temp;
 	char		*dest;
-	const char	*src;
+	const char	*source;
 
-	dest = (char *)dest_str;
-	src = (const char *)src_str;
-	if (dest == src)
-		return (dest_str);
-	if (dest > src && dest < src + numBytes)
+	dest = (char *)dst;
+	source = (const char *)src;
+	if (dest == source)
+		return (dst);
+	if (dest > source && dest < source + len)
 	{
-		temp = numBytes;
+		temp = len;
 		while (temp > 0)
 		{
 			temp--;
-			dest[temp] = src[temp];
+			dest[temp] = source[temp];
 		}
 	}
 	else
 	{
 		temp = -1;
-		while (++temp < numBytes)
-			dest[temp] = src[temp];
+		while (++temp < len)
+			dest[temp] = source[temp];
 	}
-	return (dest_str);
+	return (dst);
 }

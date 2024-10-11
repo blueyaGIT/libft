@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:03:11 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/11 10:07:11 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:21:31 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int				ft_all_length(int size, char **strs, char *sep);
 void			*ft_memchr(const void *ptr, int c, size_t n);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dest_str, const void *src_str, size_t n);
-void			*ft_memmove(void *dest_str, const void *src_str, size_t numBytes);
+void			*ft_memmove(void *dst, const void *src, size_t len);
 void			*ft_memset(void *s, int c, size_t n);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putendl_fd(char *s, int fd);
