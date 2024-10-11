@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:15:07 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/11 10:05:02 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:16:48 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,22 +40,3 @@ char	*ft_itoa(int n)
 	}
 	return (nbr);
 }
-
-// int main() {
-//     int number;
-
-//     // Test cases
-//     number = 123;
-//     printf("Number: %d, String: %s\n", number, ft_itoa(number));
-
-//     number = -456;
-//     printf("Number: %d, String: %s\n", number, ft_itoa(number));
-
-//     number = 255;
-//     printf("Number: %d, String: %s\n", number, ft_itoa(number)); // Hexadecimal representation
-
-//     number = 0;
-//     printf("Number: %d, String: %s\n", number, ft_itoa(number));
-
-//     return 0;
-// }

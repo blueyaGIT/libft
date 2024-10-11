@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 16:47:59 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/11 10:05:02 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:16:48 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,3 @@ char	*ft_strnstr(const char *src, const char *to_find, size_t len)
 	}
 	return (NULL);
 }
-
-// int main()
-// {
-//     const char *src = "Hello, world!";
-//     const char *to_find = "world";
-//     char *result;
-
-//     // Testing the custom strnstr implementation
-//     result = ft_strnstr(src, to_find, 13);
-
-//     if (result != NULL)
-//         printf("Found '%s' in '%s': %s\n", to_find, src, result);
-//     else
-//         printf("Substring '%s' not found in '%s'.\n", to_find, src);
-
-//     return 0;
-// }

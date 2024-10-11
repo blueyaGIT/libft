@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 18:16:34 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/11 10:05:02 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:16:48 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,30 +58,3 @@ char	*ft_strtrim(const char *s1, const char *set)
 	trimmed[t_length] = '\0';
 	return (trimmed);
 }
-
-// int main() {
-//     // Test cases
-//     struct {
-//         const char *input;
-//         const char *set;
-//         const char *expected;
-//     } tests[] = {
-//         {"   Hello, World!   ", " ", "Hello, World!"},
-//         {"##Hello, World!##", "#", "Hello, World!"},
-//         {"!!!Hello!!!", "!", "Hello"},
-//         {"abcde", "xyz", "abcde"},
-//         {"", " ", ""},
-//         {"   ", " ", ""},
-//         {"Test string", "Te", "st string"},
-//         {"   Hello   World   ", " ", "Hello   World"}, // Test with multiple spaces
-//         {"!!Hello!!World!!", "!", "Hello!!World"}, // Test with no trimming on one side
-//     };
-
-//     for (size_t i = 0; i < sizeof(tests) / sizeof(tests[0]); i++) {
-//         char *result = ft_strtrim(tests[i].input, tests[i].set);
-//         printf("Input: '%s', Set: '%s' => Result: '%s' | Expected: '%s'\n", 
-//                tests[i].input, tests[i].set, result ? result : "NULL", tests[i].expected);
-//         free(result); // Free the allocated memory
-//     }
-// 	return (0);
-// }

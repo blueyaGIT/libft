@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 20:12:16 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/11 10:05:02 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:16:48 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,26 +39,3 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	join[temp] = '\0';
 	return (join);
 }
-
-// int main(void)
-// {
-//     // Test strings to join
-//     char *strings[] = {"Hello", "World", "from", "42"};
-//     char *separator = ", ";
-
-//     // Call ft_strjoin with the array of strings and separator
-//     char *result = ft_strjoin(4, strings, separator);
-
-//     // Check if memory allocation succeeded
-//     if (result != NULL)
-//     {
-//         printf("Joined string: %s\n", result);  // Output: Hello, World, from, 42
-//         free(result);  // Free the allocated memory
-//     }
-//     else
-//     {
-//         printf("Memory allocation failed\n");
-//     }
-
-//     return 0;
-// }

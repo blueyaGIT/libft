@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 10:42:35 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/11 10:05:02 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:16:48 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,19 +26,3 @@ void	ft_bzero(void *s, size_t n)
 		str[temp] = '\0';
 	}
 }
-
-// #include <stdio.h>
-// #include <stdlib.h>
-// #include <string.h>
-
-// int main(void)
-// {
-// 	char str[] = "almost every programmer should know memset!";
-// 	ft_bzero (str,6);
-// 	puts (str);
-// 	printf("\n");
-// 	char str1[] = "almost every programmer should know memset!";
-// 	bzero (str1,6);
-// 	puts (str1);
-// 	return 0;
-// }

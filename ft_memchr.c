@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 16:44:11 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/11 10:05:02 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:16:48 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,19 +29,3 @@ void	*ft_memchr(const void *ptr, int c, size_t n)
 	return (NULL);
 }
 
-// int main()
-// {
-//     const char str[] = "Hello, world!";
-//     char ch = 'o';
-//     char *result;
-
-//     // Testing the custom memchr implementation
-//     result = ft_memchr(str, ch, sizeof(str));
-
-//     if (result != NULL)
-//         printf("Character '%c' found at position: %ld\n", ch, result - str);
-//     else
-//         printf("Character '%c' not found.\n", ch);
-
-//     return 0;
-// }

@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:38:53 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/11 10:05:02 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:16:48 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,3 @@ int	ft_isalnum(int c)
 {
 	return (ft_isalpha(c) || ft_isdigit(c));
 }
-
-// #include <stdio.h>
-// #include <ctype.h>
-// int main(void)
-// {
-// 	int c = '0';
-// 	int i = 'A';
-// 	int a = '-';
-// 	printf("%d %d\n", ft_isalnum(c), c);
-// 	printf("%d %d\n\n", isalnum(c), c);
-// 	printf("%d %d\n", ft_isalnum(i), i);
-// 	printf("%d %d\n\n", isalnum(i), i);
-// 	printf("%d %d\n", ft_isalnum(a), a);
-// 	printf("%d %d\n\n", isalnum(a), a);
-// 	return 0;
-// }

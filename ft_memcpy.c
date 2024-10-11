@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 12:24:37 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/11 10:05:02 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:16:48 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,3 @@ void	*ft_memcpy(void *dest_str, const void *src_str, size_t n)
 	}
 	return (dest_str);
 }
-
-// int main()
-// {
-//     const char src[50] = "Tutorialspoint";
-//     char dest[50];
-//     strcpy(dest, "Heloooo!!");
-//     printf("Before memcpy dest = %s\n", dest);
-
-//     ft_memcpy(dest, src, strlen(src) + 1);
-
-//     printf("After memcpy dest = %s\n", dest);
-//     return 0;
-// }

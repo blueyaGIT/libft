@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:57:34 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/11 10:05:02 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:16:48 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,20 +30,3 @@ char	*ft_strrchr(const char *str, int c)
 		return ((char *)str);
 	return (last_occurrence);
 }
-
-// int main()
-// {
-//     const char str[] = "Hello, world!";
-//     char ch = 'o';
-//     char *result;
-
-//     // Testing the custom strrchr implementation
-//     result = ft_strrchr(str, ch);
-
-//     if (result != NULL)
-//         printf("Last occurrence of '%c' found at position: %ld\n", ch, result - str);
-//     else
-//         printf("Character '%c' not found.\n", ch);
-
-//     return 0;
-// }

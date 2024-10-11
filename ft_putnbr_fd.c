@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 09:41:23 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/11 10:05:02 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:16:48 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,3 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	write(fd, &"0123456789"[n % 10], 1);
 }
-
-// int main()
-// {
-//     int fd = 1; // Standard output, but can be any file descriptor
-//     ft_putnbr_fd(-12345, fd);
-//     return 0;
-// }

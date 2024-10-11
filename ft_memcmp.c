@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 16:37:11 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/11 10:05:02 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:16:48 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,21 +30,3 @@ int	ft_memcmp(const void *ptr1, const void *ptr2, size_t n)
 	}
 	return (0);
 }
-
-// int main()
-// {
-//     char str1[] = "Hello, world!";
-//     char str2[] = "Hello, wOrld!";
-
-//     // Testing the custom memcmp implementation
-//     int result = ft_memcmp(str1, str2, 13);
-
-//     if (result == 0)
-//         printf("Memory blocks are identical.\n");
-//     else if (result > 0)
-//         printf("Memory block 1 is greater than memory block 2.\n");
-//     else
-//         printf("Memory block 1 is less than memory block 2.\n");
-
-//     return 0;
-// }

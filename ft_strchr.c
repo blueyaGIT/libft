@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 12:45:49 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/11 10:05:02 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:16:48 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,3 @@ char	*ft_strchr(const char *str, int c)
 
 	return (NULL);
 }
-
-// int main()
-// {
-//     const char str[] = "Hello, world!";
-//     char ch = 'o';
-//     char *result;
-//     result = ft_strchr(str, ch);
-//     if (result != NULL)
-//         printf("Character '%c' found at position: %ld\n", ch, result - str);
-//     else
-//         printf("Character '%c' not found.\n", ch);
-//     return 0;
-// }
