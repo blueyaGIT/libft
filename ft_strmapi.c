@@ -6,11 +6,11 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:22:12 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/10 10:25:04 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:05:02 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 static int	ft_strlen_const_special(const char *str)
 {

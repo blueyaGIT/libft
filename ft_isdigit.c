@@ -6,11 +6,11 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:32:30 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/10 10:16:55 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:05:02 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 int	ft_isdigit(int c)
 {
