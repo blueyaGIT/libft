@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:03:11 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/11 11:12:16 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/11 13:33:19 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,15 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
 size_t			ft_strlen(char *str);
 size_t			ft_strlen_const(const char *str);
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
+t_list			*ft_lstnew(void *content);
+int				ft_lstsize(t_list *lst);
+void			ft_lstadd_front(t_list **lst, t_list *new);
+
 #endif /* LIBFT_H */

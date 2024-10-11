@@ -5,6 +5,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 # Source directory and include directory
 SRCDIR = srcs
+BSRCDIR = srcs_b
 INCDIR = includes
 
 # List of source files
@@ -52,13 +53,22 @@ SRCS =	$(SRCDIR)/ft_all_length.c \
 		$(SRCDIR)/ft_substr.c \
 		$(SRCDIR)/ft_calloc.c
 
+BSRCS = $(BSRCDIR)/ft_lstnew.c \
+		$(BSRCDIR)/ft_lstadd_front.c \
+		$(BSRCDIR)/ft_lstsize.c 
+
 # Objects files
 OBJS = $(SRCS:.c=.o)
+OBJS_B = $(BSRCS:.c=.o)
 
 # Compile the library
 $(NAME): $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
 	@echo "Library $(NAME) created."
+
+bonus: $(OBJS) $(OBJS_B)
+	@ar rcs $(NAME) $(OBJS) $(OBJS_B)
+	@echo "Bonus library $(NAME) created."
 
 # Rule for compiling .c files into .o files
 %.o: %.c
@@ -69,7 +79,7 @@ all: $(NAME)
 
 # Clean object files
 clean:
-	@rm -f $(OBJS)
+	@rm -f $(OBJS) $(OBJS_B)
 	@echo "Object files removed."
 
 # Clean everything (object files and library)
