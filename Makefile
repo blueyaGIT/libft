@@ -49,7 +49,8 @@ SRCS =	$(SRCDIR)/ft_all_length.c \
 		$(SRCDIR)/ft_strtrim.c \
 		$(SRCDIR)/ft_tolower.c \
 		$(SRCDIR)/ft_toupper.c \
-		$(SRCDIR)/ft_substr.c 
+		$(SRCDIR)/ft_substr.c \
+		$(SRCDIR)/ft_calloc.c
 
 # Objects files
 OBJS = $(SRCS:.c=.o)

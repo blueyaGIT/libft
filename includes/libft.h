@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:03:11 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/11 10:42:24 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/11 11:12:16 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
+void			*calloc(size_t count, size_t size);
 
 char			*ft_strchr(const char *str, int c);
 char			*ft_strrchr(const char *str, int c);
