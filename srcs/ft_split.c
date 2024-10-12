@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:15:32 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/12 09:55:01 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/12 10:47:01 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,64 +14,75 @@
 
 static int	is_separator(char c, char separator)
 {
-	if (c == '\0' || c == separator)
-		return (1);
-	return (0);
+	return (c == separator || c == '\0');
 }
 
 static void	ft_strcpy_void(char *dest, const char *src, char separator)
 {
-	while (!is_separator(*src, separator))
-	{
-		*dest = *src;
-		src++;
-		dest++;
-	}
+	while (*src && !is_separator(*src, separator))
+		*dest++ = *src++;
 	*dest = '\0';
 }
 
 int	count_split(const char *str, char sep)
 {
-	int		temp;
-	int		count;
+	int	count;
+	int	in_word;
 
-	temp = -1;
 	count = 0;
-	while (str[++temp])
+	in_word = 0;
+	while (*str)
 	{
-		if (!is_separator(str[temp], sep))
-			count++;
-		if (is_separator(str[temp + 1], sep))
-			count++;
+		if (!is_separator(*str, sep))
+		{
+			if (!in_word)
+			{
+				in_word = 1;
+				count++;
+			}
+		}
+		else
+			in_word = 0;
+		str++;
 	}
 	return (count);
+}
+
+static char	**fill_split(char **split, const char *s, char c)
+{
+	int	idx;
+	int	temp;
+	int	start;
+
+	idx = 0;
+	temp = 0;
+	while (s[temp])
+	{
+		while (is_separator(s[temp], c))
+			temp++;
+		if (s[temp] == '\0')
+			break ;
+		start = temp;
+		while (s[temp] && !is_separator(s[temp], c))
+			temp++;
+		split[idx] = (char *)malloc((temp - start + 1) * sizeof(char));
+		if (!split[idx])
+			return (NULL);
+		ft_strcpy_void(split[idx], &s[start], c);
+		idx++;
+	}
+	split[idx] = NULL;
+	return (split);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**split;
-	int		temp;
-	int		end;
-	int		cur;
+	int		word_count;
 
-	split = (char **)malloc((count_split(s, c) + 1) * sizeof(*split));
-	temp = -1;
-	cur = 0;
-	while (s[++temp])
-	{
-		end = 0;
-		if (is_separator(s[temp], c))
-			temp++;
-		else
-		{
-			while (!is_separator(s[temp + end], c))
-				end++;
-			split[cur] = (char *)malloc((end +1) * sizeof(char));
-			ft_strcpy_void(split[cur], &s[temp], c);
-			temp += end;
-			cur++;
-		}
-	}
-	split[cur] = 0;
-	return (split);
+	word_count = count_split(s, c);
+	split = (char **)malloc((word_count + 1) * sizeof(*split));
+	if (!split)
+		return (NULL);
+	return (fill_split(split, s, c));
 }
