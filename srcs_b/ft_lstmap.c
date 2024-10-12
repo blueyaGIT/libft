@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 14:22:07 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/11 14:24:05 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/12 09:46:12 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,5 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		ft_lstadd_back(&new_lst, new_node);
 		lst = lst->next;
 	}
-
 	return (new_lst);
 }
