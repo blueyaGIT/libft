@@ -6,11 +6,11 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:40:17 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/12 09:47:28 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/12 10:11:16 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../includes/libft.h"
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
@@ -19,6 +19,8 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 
 	length = 0;
 	src_length = ft_strlen(src);
+	if (size == 0)
+		return (src_length);
 	while (length < size - 1 && src[length] != '\0')
 	{
 		dest[length] = src[length];

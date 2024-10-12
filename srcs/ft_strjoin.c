@@ -6,36 +6,26 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 20:12:16 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/12 09:47:28 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/12 10:33:30 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../includes/libft.h"
 
-char	*ft_strjoin(int size, char **strs, char *sep)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		temp;
-	int		i;
-	int		j;
-	char	*join;
+	size_t	len1;
+	size_t	len2;
+	char	*joined_str;
 
-	join = (char *)malloc(ft_all_length(size, strs, sep) + 1);
-	if (!join)
+	if (!s1 || !s2)
 		return (NULL);
-	i = -1;
-	temp = 0;
-	while (++i < size)
-	{
-		j = -1;
-		while (strs[i][++j] != 0)
-			join[temp++] = strs[i][j];
-		if (i < size - 1)
-		{
-			j = -1;
-			while (sep[++j] != '\0')
-				join[temp++] = sep[j];
-		}
-	}
-	join[temp] = '\0';
-	return (join);
+	len1 = strlen(s1);
+	len2 = strlen(s2);
+	joined_str = (char *)malloc(len1 + len2 + 1);
+	if (!joined_str)
+		return (NULL);
+	strcpy(joined_str, s1);
+	strcat(joined_str, s2);
+	return (joined_str);
 }

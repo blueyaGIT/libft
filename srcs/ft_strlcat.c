@@ -6,47 +6,30 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:35:37 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/12 09:47:28 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/12 10:08:05 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../includes/libft.h"
 
-char			*ft_strncat(char *dest, char *src, unsigned int nb);
-
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size)
 {
-	unsigned int	dest_size;
-	unsigned int	src_size;
-	unsigned int	total_size;
-	unsigned int	copy_size;
+	unsigned int	dest_len;
+	unsigned int	src_len;
+	unsigned int	total_len;
+	unsigned int	i;
 
-	total_size = 0;
-	dest_size = ft_strlen(dest);
-	src_size = ft_strlen(src);
-	if (dest_size >= size)
-		return (total_size);
-	copy_size = size - dest_size - 1;
-	strncat(dest + dest_size, src, copy_size);
-	dest[size - 1] = '\0';
-	return (total_size);
-}
-
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
-{
-	unsigned int	x;
-	unsigned int	y;
-
-	x = 0;
-	y = 0;
-	while (dest[x] != '\0')
-		x++;
-	while (y < nb && src[y] != '\0')
+	dest_len = ft_strlen(dest);
+	src_len = ft_strlen_const(src);
+	if (size <= dest_len)
+		return (size + src_len);
+	total_len = dest_len + src_len;
+	i = 0;
+	while (src[i] && (dest_len + i) < (size - 1))
 	{
-		dest[x] = src[y];
-		x++;
-		y++;
+		dest[dest_len + i] = src[i];
+		i++;
 	}
-	dest[x] = '\0';
-	return (dest);
+	dest[dest_len + i] = '\0';
+	return (total_len);
 }

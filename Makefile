@@ -6,6 +6,7 @@ CFLAGS = -Wall -Wextra -Werror
 # Source directory and include directory
 SRCDIR = srcs
 BSRCDIR = srcs_b
+INCLUDES = includes
 
 # List of source files
 SRCS =	$(SRCDIR)/ft_all_length.c \
@@ -77,7 +78,7 @@ bonus: $(OBJS) $(OBJS_B)
 
 # Rule for compiling .c files into .o files
 %.o: %.c
-	$(CC) $(CFLAGS) -I -c $< -o $@
+	$(CC) $(CFLAGS) -I $(INCLUDES) -c $< -o $@
 
 # Default rule
 all: $(NAME)
