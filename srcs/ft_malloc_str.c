@@ -6,11 +6,11 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:18:26 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/11 10:55:12 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/12 09:47:28 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../libft.h"
 
 char	*ft_malloc_str(char *str)
 {
