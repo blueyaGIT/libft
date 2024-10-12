@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:15:32 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/12 10:47:01 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/12 10:57:02 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,41 +48,67 @@ int	count_split(const char *str, char sep)
 	return (count);
 }
 
-static char	**fill_split(char **split, const char *s, char c)
+static void	fill_word(char **split, const char *s, int *idx,
+					 int start, int end)
 {
-	int	idx;
-	int	temp;
-	int	start;
-
-	idx = 0;
-	temp = 0;
-	while (s[temp])
+	split[*idx] = (char *)malloc((end - start + 1) * sizeof(char));
+	if (split[*idx])
 	{
-		while (is_separator(s[temp], c))
-			temp++;
-		if (s[temp] == '\0')
-			break ;
-		start = temp;
-		while (s[temp] && !is_separator(s[temp], c))
-			temp++;
-		split[idx] = (char *)malloc((temp - start + 1) * sizeof(char));
-		if (!split[idx])
-			return (NULL);
-		ft_strcpy_void(split[idx], &s[start], c);
-		idx++;
+		ft_strncpy_const(split[*idx], &s[start], end - start);
+		split[*idx][end - start] = '\0';
 	}
-	split[idx] = NULL;
-	return (split);
+	(*idx)++;
+}
+
+static int	count_words(const char *s, char c)
+{
+	int	count;
+	int	in_word;
+
+	count = 0;
+	in_word = 0;
+	while (*s)
+	{
+		if (*s == c)
+			in_word = 0;
+		else if (!in_word)
+		{
+			in_word = 1;
+			count++;
+		}
+		s++;
+	}
+	return (count);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**split;
+	int		idx;
+	int		start;
+	int		temp;
 	int		word_count;
 
-	word_count = count_split(s, c);
-	split = (char **)malloc((word_count + 1) * sizeof(*split));
+	idx = 0;
+	start = 0;
+	if (!s)
+		return (NULL);
+	word_count = count_words(s, c);
+	split = (char **)malloc((word_count + 1) * sizeof(char *));
 	if (!split)
 		return (NULL);
-	return (fill_split(split, s, c));
+	while (s[start])
+	{
+		while (s[start] == c)
+			start++;
+		if (s[start] == '\0')
+			break ;
+		temp = start;
+		while (s[temp] && s[temp] != c)
+			temp++;
+		fill_word(split, s, &idx, start, temp);
+		start = temp;
+	}
+	split[idx] = NULL;
+	return (split);
 }
