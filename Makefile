@@ -1,6 +1,6 @@
 # Variables
 NAME = libft.a
-BONUS_NAME = libft.a
+BONUS_NAME = libft_bonus.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
