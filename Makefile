@@ -1,5 +1,6 @@
 # Variables
 NAME = libft.a
+BONUS_NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
@@ -68,9 +69,9 @@ $(NAME): $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
 	@echo "Library $(NAME) created."
 
-bonus: $(OBJS) $(OBJS_B)
-	@ar rcs $(NAME) $(OBJS) $(OBJS_B)
-	@echo "Bonus library $(NAME) created."
+$(BONUS_NAME): $(OBJS) $(OBJS_B)
+	@ar rcs $(BONUS_NAME) $(OBJS) $(OBJS_B)
+	@echo "Bonus library $(BONUS_NAME) created."
 
 # Rule for compiling .c files into .o files
 %.o: %.c
@@ -79,6 +80,9 @@ bonus: $(OBJS) $(OBJS_B)
 # Default rule
 all: $(NAME)
 
+# Rule for bonus library
+bonus: $(BONUS_NAME)
+
 # Clean object files
 clean:
 	@rm -f $(OBJS) $(OBJS_B)
@@ -86,8 +90,8 @@ clean:
 
 # Clean everything (object files and library)
 fclean: clean
-	@rm -f $(NAME)
-	@echo "$(NAME) removed."
+	@rm -f $(NAME) $(BONUS_NAME)
+	@echo "Libraries removed."
 
 # Rebuild everything
 re: fclean all
