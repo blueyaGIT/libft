@@ -6,11 +6,11 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:57:34 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/13 08:21:19 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/13 09:04:47 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)
 {
