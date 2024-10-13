@@ -6,15 +6,30 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:15:32 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/13 09:04:47 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/13 10:54:10 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	is_separator(char c, char separator)
+static char	*ft_strncpy_const(char *dest, const char *src, unsigned int n)
 {
-	return (c == separator || c == '\0');
+	char			*ptr;
+	unsigned int	i;
+
+	ptr = dest;
+	i = 0;
+	while (i < n && src[i] != '\0')
+	{
+		*ptr++ = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		*ptr++ = '\0';
+		i++;
+	}
+	return (dest);
 }
 
 int	count_split(const char *str, char sep)
@@ -26,7 +41,7 @@ int	count_split(const char *str, char sep)
 	in_word = 0;
 	while (*str)
 	{
-		if (!is_separator(*str, sep))
+		if (!((int) str == sep || str == (void *)0))
 		{
 			if (!in_word)
 			{

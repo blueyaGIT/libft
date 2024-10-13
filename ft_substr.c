@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 10:39:38 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/13 09:06:42 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/13 10:29:33 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,26 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
-	size_t	s_len;
-	size_t	substr_len;
+	char	*new;
 
-	s_len = strlen(s);
-	if (!s)
+	if (start > ft_strlen(s))
+	{
+		len = 0;
+		start = 0;
+	}
+	while ((*s != '\0') && (start-- > 0))
+		s++;
+	if (ft_strlen(s) < len)
+		len = ft_strlen(s);
+	substr = malloc(len + 1);
+	if (substr == NULL)
 		return (NULL);
-	if (start >= s_len)
-		return (strdup(""));
-	substr_len = s_len - start;
-	if (substr_len > len)
-		substr_len = len;
-	substr = (char *)malloc((substr_len + 1) * sizeof(char));
-	if (!substr)
-		return (NULL);
-	memcpy(substr, s + start, substr_len);
-	substr[substr_len] = '\0';
+	new = substr;
+	while ((*s != '\0') && (len > 0))
+	{
+		*new++ = *s++;
+		len--;
+	}
+	*new = '\0';
 	return (substr);
 }
