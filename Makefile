@@ -62,7 +62,8 @@ BSRCS = $(BSRCDIR)/ft_lstnew.c \
 		$(BSRCDIR)/ft_lstdelone.c \
 		$(BSRCDIR)/ft_lstdel.c \
 		$(BSRCDIR)/ft_lstiter.c \
-		$(BSRCDIR)/ft_lstclear.c 
+		$(BSRCDIR)/ft_lstclear.c \
+		$(BSRCDIR)/ft_lstmap.c
 
 # Objects files
 OBJS = $(SRCS:.c=.o)

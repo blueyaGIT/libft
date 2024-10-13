@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 10:39:38 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/12 09:55:01 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/13 08:41:29 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,29 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
-	size_t	temp;
+	size_t	s_len = strlen(s);  // Length of input string
+	size_t	substr_len;         // Actual length to allocate
 
 	if (!s)
 		return (NULL);
-	if (start >= ft_strlen_const(s))
-		return (ft_strdup(""));
-	substr = (char *)malloc(sizeof(char) * (len + 1));
+
+	// If start is beyond the length of the string, return an empty string
+	if (start >= s_len)
+		return (strdup(""));
+
+	// Determine the actual length to allocate (min between len and remaining part of the string)
+	substr_len = s_len - start;
+	if (substr_len > len)
+		substr_len = len;
+
+	// Allocate memory for the substring + '\0'
+	substr = (char *)malloc((substr_len + 1) * sizeof(char));
 	if (!substr)
 		return (NULL);
-	temp = 0;
-	while (temp < len && s[start + temp] != '\0')
-	{
-		substr[temp] = s[start + temp];
-		temp++;
-	}
-	substr[temp] = '\0';
+
+	// Copy the substring and add null terminator
+	memcpy(substr, s + start, substr_len);
+	substr[substr_len] = '\0';
+
 	return (substr);
 }

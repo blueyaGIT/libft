@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 13:43:40 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/12 09:55:01 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/13 08:15:27 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,9 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	int		temp;
-
-	temp = 0;
-	while (temp < ft_lstsize(lst))
-	{
+	if (!lst)
+		return (NULL);
+	while (lst->next)
 		lst = lst->next;
-		temp++;
-	}
 	return (lst);
 }

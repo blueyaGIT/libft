@@ -6,37 +6,46 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:15:07 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/12 09:55:01 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/13 08:11:05 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include <stdlib.h>
+
+static int	get_num_length(int n)
+{
+	int	len;
+
+	len = (n <= 0);
+	while (n != 0)
+	{
+		len++;
+		n /= 10;
+	}
+	return (len);
+}
 
 char	*ft_itoa(int n)
 {
-	char	*nbr;
+	int		len;
+	char	*str;
+	long	num;
 
-	nbr = (char *)malloc((10 +1) * sizeof(char));
-	if (n >= 0 && nbr)
+	len = get_num_length(n);
+	str = (char *)malloc((len + 1) * sizeof(char));
+	num = n;
+	if (!str)
+		return (NULL);
+	str[len] = '\0';
+	if (num < 0)
 	{
-		*--nbr = '0' + (n % 10);
-		n /= 10;
-		while (n != 0)
-		{
-			*--nbr = '0' + (n % 10);
-			n /= 10;
-		}
+		str[0] = '-';
+		num *= -1;
 	}
-	else if (nbr)
+	while (len-- > (n < 0))
 	{
-		*--nbr = '0' - (n % 10);
-		n /= 10;
-		while (n != 0)
-		{
-			*--nbr = '0' - (n % 10);
-			n /= 10;
-		}
-		*--nbr = '-';
+		str[len] = '0' + (num % 10);
+		num /= 10;
 	}
-	return (nbr);
+	return (str);
 }

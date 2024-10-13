@@ -6,13 +6,13 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 11:11:40 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/12 09:55:01 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/13 08:24:23 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	*calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
 	size_t			total;
 	size_t			temp;
