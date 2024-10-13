@@ -44,6 +44,7 @@ SRCS =	$(SRCDIR)/ft_all_length.c \
 		$(SRCDIR)/ft_strmapi.c \
 		$(SRCDIR)/ft_strncmp.c \
 		$(SRCDIR)/ft_strncpy.c \
+		$(SRCDIR)/ft_strncpy_const.c \
 		$(SRCDIR)/ft_strnstr.c \
 		$(SRCDIR)/ft_strrchr.c \
 		$(SRCDIR)/ft_strstr.c \
