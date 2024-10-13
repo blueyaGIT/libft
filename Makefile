@@ -1,6 +1,5 @@
 # Variables
 NAME = libft.a
-BONUS_NAME = libft_bonus.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
@@ -24,20 +23,20 @@ SRCS =	ft_atoi.c \
 		ft_putstr_fd.c \
 		ft_split.c \
 		ft_strchr.c \
+		ft_strdup.c \
 		ft_striteri.c \
 		ft_strjoin.c \
 		ft_strlcat.c \
 		ft_strlcpy.c \
 		ft_strlen.c \
-		ft_strdup.c \
 		ft_strmapi.c \
 		ft_strncmp.c \
 		ft_strnstr.c \
 		ft_strrchr.c \
 		ft_strtrim.c \
+		ft_substr.c \
 		ft_tolower.c \
 		ft_toupper.c \
-		ft_substr.c \
 		ft_calloc.c
 
 BSRCS = ft_lstnew.c \
@@ -54,14 +53,15 @@ BSRCS = ft_lstnew.c \
 OBJS = $(SRCS:.c=.o)
 OBJS_B = $(BSRCS:.c=.o)
 
-# Compile the library
+# Rule to compile the main library
 $(NAME): $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
 	@echo "Library $(NAME) created."
 
-$(BONUS_NAME): $(OBJS) $(OBJS_B)
-	@ar rcs $(BONUS_NAME) $(OBJS) $(OBJS_B)
-	@echo "Bonus library $(BONUS_NAME) created."
+# Rule to compile the bonus files only when requested
+bonus: $(OBJS) $(OBJS_B)
+	@ar rcs $(NAME) $(OBJS) $(OBJS_B)
+	@echo "Bonus library $(NAME) created."
 
 # Rule for compiling .c files into .o files
 %.o: %.c
@@ -70,9 +70,6 @@ $(BONUS_NAME): $(OBJS) $(OBJS_B)
 # Default rule
 all: $(NAME)
 
-# Rule for bonus library
-bonus: $(BONUS_NAME)
-
 # Clean object files
 clean:
 	@rm -f $(OBJS) $(OBJS_B)
@@ -80,8 +77,8 @@ clean:
 
 # Clean everything (object files and library)
 fclean: clean
-	@rm -f $(NAME) $(BONUS_NAME)
-	@echo "Libraries removed."
+	@rm -f $(NAME)
+	@echo "Library $(NAME) removed."
 
 # Rebuild everything
 re: fclean all
