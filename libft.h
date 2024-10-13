@@ -6,18 +6,15 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:03:11 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/13 08:36:59 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/13 09:24:57 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stdio.h>
 # include <unistd.h>
 # include <string.h>
-# include <strings.h>
 # include <stdlib.h>
-# include <stddef.h>
 # include <fcntl.h>
 # define BUFF_SIZE 100
 
@@ -66,8 +63,7 @@ char			**ft_split(char const *s, char c);
 
 unsigned int	ft_strlcat(char *dest, char const *src, unsigned int size);
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
-size_t			ft_strlen(char *str);
-size_t			ft_strlen_const(const char *str);
+size_t			ft_strlen(const char *str);
 
 typedef struct s_list
 {
@@ -83,7 +79,7 @@ int				ft_lstsize(t_list *lst);
 void			ft_lstadd_front(t_list **lst, t_list *new);
 void			ft_lstadd_back(t_list **lst, t_list *new);
 void			ft_lstdelone(t_list *lst, void (*del)(void *));
-void			del(void *content);
+void			ft_lstdel(void *content);
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void *));
 

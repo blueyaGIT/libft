@@ -6,13 +6,13 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:33:54 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/13 09:04:47 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/13 09:09:18 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	int		str_length_da;
 

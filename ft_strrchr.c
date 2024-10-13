@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:57:34 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/13 09:04:47 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/13 09:15:06 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ char	*ft_strrchr(const char *str, int c)
 	while (*str != '\0')
 	{
 		if (*str == (char)c)
-		{
 			last_occurrence = (char *)str;
-		}
 		str++;
 	}
 	if (c == '\0')
