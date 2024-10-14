@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:03:11 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/13 11:19:26 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/14 11:12:05 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char			*ft_strtrim(char const *s1, char const *set);
 char			**ft_split(char const *s, char c);
 
 unsigned int	ft_strlcat(char *dest, char const *src, unsigned int size);
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
+unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size);
 size_t			ft_strlen(const char *str);
 
 typedef struct s_list
