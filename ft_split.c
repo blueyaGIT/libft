@@ -6,11 +6,25 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:15:32 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/14 11:28:35 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/14 13:18:57 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char	*alloc_word(const char *s, int len)
+{
+	char	*word;
+
+	word = (char *)ft_calloc((len + 1), sizeof(char));
+	if (word)
+	{
+		ft_strlcpy(word, s, len + 1);
+	}
+	else
+		return (NULL);
+	return (word);
+}
 
 static void	free_split(char **split, int words)
 {
@@ -28,8 +42,11 @@ static int	count_words(const char *s, char c)
 	in_word = 0;
 	while (*s)
 	{
-		if (*s != c && !in_word && ++count)
+		if (*s != c && !in_word)
+		{
 			in_word = 1;
+			count++;
+		}
 		else if (*s == c)
 			in_word = 0;
 		s++;
@@ -37,59 +54,43 @@ static int	count_words(const char *s, char c)
 	return (count);
 }
 
-static char	*alloc_word(const char *s, int len)
+static int	process_word(char **split, const char *s, int *start, char c)
 {
-	char	*word;
+	int	temp;
 
-	word = (char *)malloc((len + 1) * sizeof(char));
-	if (word)
-	{
-		ft_strlcpy(word, s, len + 1);
-	}
-	return (word);
-}
-
-static int	inside_if(char **split, char c, int start, char const *s)
-{
-	int	words;
-	int	idx;
-
-	idx = 0;
-	words = start;
-	while (s[words] && s[words] != c)
-		words++;
-	split[idx++] = alloc_word(s + start, words - start);
-	if (!split)
-	{
-		free_split(split, idx - 1);
-		return (12278);
-	}
-	start = words;
-	return (idx);
+	temp = *start;
+	while (s[temp] && s[temp] != c)
+		temp++;
+	split[0] = alloc_word(s + *start, temp - *start);
+	if (!split[0])
+		return (0);
+	*start = temp;
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**split;
+	int		idx;
 	int		start;
 	int		words;
-	int		idx;
 
+	idx = 0;
 	start = 0;
 	words = count_words(s, c);
 	split = (char **)malloc((words + 1) * sizeof(char *));
-	if (!s || *split == (void *)0)
+	if (!s || !split)
 		return (NULL);
 	while (s[start])
 	{
 		if (s[start] != c)
 		{
-			idx = inside_if(split, c, start, s);
-			if (idx == 12278)
-				return (NULL);
+			if (!process_word(&split[idx++], s, &start, c))
+				return (free_split(split, idx - 1), NULL);
 		}
 		else
 			start++;
 	}
-	return (split[idx] = NULL, split);
+	split[idx] = NULL;
+	return (split);
 }
