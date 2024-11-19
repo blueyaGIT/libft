@@ -50,24 +50,24 @@ SRCS =	$(SRCS_DIR)/ft_atoi.c \
 		$(SRCS_DIR)/ft_lstdelone_bonus.c \
 		$(SRCS_DIR)/ft_lstiter_bonus.c \
 		$(SRCS_DIR)/ft_lstclear_bonus.c \
-		$(SRCS_DIR)/ft_lstmap_bonus.c
+		$(SRCS_DIR)/ft_lstmap_bonus.c \
+		$(PRINTF_DIR)/ft_utils.c \
+		$(PRINTF_DIR)/ft_print_hex_nbr.c \
+		$(PRINTF_DIR)/ft_print_nbr.c \
+		$(PRINTF_DIR)/ft_print_str.c \
+		$(PRINTF_DIR)/ft_print_unbr.c \
+		$(PRINTF_DIR)/ft_print_voidptr.c \
+		$(PRINTF_DIR)/ft_printf.c
 
 # Object files
 OBJS = $(SRCS:.c=.o)
 
-PRINTF_LIB= $(PRINTF_DIR)/libftprintf.a
-
 all: $(NAME)
 
 # Rule to compile the main library
-$(NAME): $(OBJS) $(PRINTF_LIB)
+$(NAME): $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
-	@ar rcs $(NAME) $(PRINTF_LIB)
 	@echo "Library $(NAME) created."
-
-# Compile ft_printf
-$(PRINTF_LIB):
-	@$(MAKE) -C $(PRINTF_DIR)
 
 # Object file compilation rule
 .c.o:
@@ -76,13 +76,11 @@ $(PRINTF_LIB):
 # Clean object files and libraries
 clean:
 	@rm -f $(OBJS)
-	@$(MAKE) clean -C $(PRINTF_DIR)
 	@echo "Object files removed."
 
 # Clean all generated files
 fclean: clean
 	@rm -f $(NAME)
-	@$(MAKE) fclean -C $(PRINTF_DIR)
 	@echo "All generated files removed."
 
 # Rebuild everything
