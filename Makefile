@@ -3,6 +3,9 @@ NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
+PRINTF_DIR = ./extra/printf
+PRINTF = $(PRINTF_DIR)/libftprintf.a
+
 # List of source files (all in the parent directory 't1')
 SRCS =	ft_atoi.c \
 		ft_bzero.c \
@@ -53,6 +56,8 @@ BSRCS = ft_lstnew_bonus.c \
 OBJS = $(SRCS:.c=.o)
 OBJS_B = $(BSRCS:.c=.o)
 
+all: $(PRINTF) $(NAME) bonus
+
 # Rule to compile the main library
 $(NAME): $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
@@ -63,24 +68,28 @@ bonus: $(OBJS) $(OBJS_B)
 	@ar rcs $(NAME) $(OBJS) $(OBJS_B)
 	@echo "Bonus library $(NAME) created."
 
-# Rule for compiling .c files into .o files
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+# Rule to compile libftprintf
+$(PRINTF):
+	@cd $(PRINTF_DIR) && make
 
-# Default rule
-all: $(NAME)
+# Object file compilation rule
+.c.o:
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
-# Clean object files
+# Clean object files and libraries
 clean:
-	@rm -f $(OBJS) $(OBJS_B)
+	@rm -f $(OBJS)
+	@cd $(PRINTF_DIR) && make clean
 	@echo "Object files removed."
 
-# Clean everything (object files and library)
+# Clean all generated files
 fclean: clean
-	@rm -f $(NAME)
-	@echo "Library $(NAME) removed."
+	@rm -f $(NAME) $(OBJS_B)
+	@cd $(PRINTF_DIR) && make fclean
+	@echo "All generated files removed."
 
 # Rebuild everything
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+# Phony targets
+.PHONY: all clean fclean re $(PRINTF)
