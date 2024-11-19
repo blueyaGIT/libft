@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 11:45:23 by dalbano           #+#    #+#             */
-/*   Updated: 2024/11/19 11:39:38 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/11/19 12:25:16 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int	ft_putstr_fd_printf(char *s, int fd)
 	return (len);
 }
 
-char	*ft_strchr_p_printf(const char *str, int c)
+char	*ft_strchr_p(const char *str, int c)
 {
 	char	ch;
 
