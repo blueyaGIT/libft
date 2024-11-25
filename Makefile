@@ -72,11 +72,10 @@ all: $(NAME)
 # Rule to compile the main library
 $(NAME): $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
-	@echo "Library $(NAME) created."
 
 # Object file compilation rule
 .c.o:
-	$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
+	@$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
 
 # Clean object files and libraries
 clean:
