@@ -80,12 +80,10 @@ $(NAME): $(OBJS)
 # Clean object files and libraries
 clean:
 	@rm -f $(OBJS)
-	@echo "Object files removed."
 
 # Clean all generated files
 fclean: clean
 	@rm -f $(NAME)
-	@echo "All generated files removed."
 
 # Rebuild everything
 re: fclean all
