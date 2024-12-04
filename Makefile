@@ -71,6 +71,17 @@ SRCS = $(addprefix $(SRCS_DIR)/, $(LIBFT_SRCS)) \
        $(addprefix $(PRINTF_DIR)/, $(PRINTF_SRCS)) \
        $(addprefix $(GNL_DIR)/, $(GNL_SRCS))
 
+# ---------- COLORS AND STUFF ---------- #
+GREEN = \033[0;32m
+RED = \033[0;31m
+YELLOW = \033[0;33m
+CYAN = \033[0;36m
+NC = \033[0m
+CLEAR_LINE = \033[2K\r
+
+TOTAL_SRCS = $(words $(SRCS))
+CURRENT = 0
+
 # Object files
 OBJS = $(SRCS:.c=.o)
 
@@ -82,6 +93,9 @@ $(NAME): $(OBJS)
 
 # Object file compilation rule
 .c.o:
+	@$(eval CURRENT := $(shell echo $$(($(CURRENT) + 1))))
+	@$(eval PERCENT := $(shell echo $$(($(CURRENT) * 100 / $(TOTAL_SRCS)))))
+	@printf "$(CLEAR_LINE)$(YELLOW)Compiling $(PERCENT)%% [$(CURRENT)/$(TOTAL_SRCS)] $(CYAN)$<$(NC)"
 	@$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
 
 # Clean object files and libraries
