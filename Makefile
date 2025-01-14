@@ -85,7 +85,7 @@ CURRENT = 0
 # Object files
 OBJS = $(SRCS:.c=.o)
 
-all: build-libft $(NAME)
+all: $(NAME)
 	@true
 
 # Rule to compile the main library
@@ -99,9 +99,6 @@ $(NAME): $(OBJS)
 	@printf "$(CLEAR_LINE)$(YELLOW)🚧 Compiling $(PERCENT)%% [$(CURRENT)/$(TOTAL_SRCS)] $(CYAN)$<$(NC) 🚧"
 	@$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
 
-build-libft:
-	@echo "$(CLEAR_LINE)$(YELLOW)🚧 Building LIBFT 🚧$(NC)"
-
 # Clean object files and libraries
 clean:
 	@rm -f $(OBJS)
@@ -114,4 +111,4 @@ fclean: clean
 re: fclean all
 
 # Phony targets
-.PHONY: all clean fclean re build-libft
+.PHONY: all clean fclean re
