@@ -1,4 +1,4 @@
-<a href="https://github.com/blueyaGIT/libft"><img src="https://github.com/blueyaGIT/blueyaGIT/blob/8c87b7d8844ae2722bd17ac47e8c1a7dd95a2475/covers/cover-libft-bonus.png" alt="libft"></a>
+<a href="https://github.com/blueyaGIT/libft"><img src="https://github.com/blueyaGIT/blueyaGIT/blob/b34a5a4e10b9019609659eaa0541a4325db88ca5/covers/cover-libft-bonus.png" alt="libft"></a>
 
 ###
 
