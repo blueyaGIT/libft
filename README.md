@@ -1,4 +1,11 @@
-<a href="https://github.com/blueyaGIT/libft"><img src="https://github.com/blueyaGIT/blueyaGIT/blob/b34a5a4e10b9019609659eaa0541a4325db88ca5/covers/cover-libft-bonus.png" alt="libft"></a>
+<p align="center">
+  <img src="https://github.com/blueyaGIT/blueyaGIT/blob/master/42_badges/libftm.png?raw=true" alt="libft"/>
+</p>
+
+<p align="center">
+  Score: <i>125/100</i><br>
+  Finished: <i>14.10.2024</i><br>
+</p>
 
 ###
 
