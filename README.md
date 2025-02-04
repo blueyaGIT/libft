@@ -147,3 +147,7 @@ The `libft` library includes the following functions (for more detailed informat
 - `ft_putchar_fd()`: Writes a `char` to a given file descriptor.
 - `ft_putstr_fd()`: Writes a `string` to a given file descriptor.
 - `ft_putendl_fd()`: Writes a `string` followed by a newline to a given file descriptor.
+
+## 🚀 Next Project
+
+[ft_printf](https://github.com/blueyaGIT/printf)
