@@ -150,4 +150,4 @@ The `libft` library includes the following functions (for more detailed informat
 
 ## 🚀 Next Project
 
-<a href="https://github.com/blueyaGIT/printf"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=ft_printf"></a>
+<a href="https://github.com/blueyaGIT/printf"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=BF94E4&width=435&lines=ft_printf"></a>
