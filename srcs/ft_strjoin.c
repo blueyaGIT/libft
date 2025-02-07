@@ -6,13 +6,13 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 20:12:16 by dalbano           #+#    #+#             */
-/*   Updated: 2024/11/19 12:13:41 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/02/07 17:14:03 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-static char	*ft_strcpy(char *dest, const char *src)
+static char	*ft_join_strcpy(char *dest, const char *src)
 {
 	char	*ptr;
 
@@ -25,7 +25,7 @@ static char	*ft_strcpy(char *dest, const char *src)
 	return (dest);
 }
 
-static char	*ft_strcat(char *dest, const char *src)
+static char	*ft_join_strcat(char *dest, const char *src)
 {
 	int	x;
 
@@ -55,7 +55,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	joined_str = (char *)malloc(len1 + len2 + 1);
 	if (!joined_str)
 		return (NULL);
-	ft_strcpy(joined_str, s1);
-	ft_strcat(joined_str, s2);
+	ft_join_strcpy(joined_str, s1);
+	ft_join_strcat(joined_str, s2);
 	return (joined_str);
 }
