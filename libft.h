@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:03:11 by dalbano           #+#    #+#             */
-/*   Updated: 2024/11/19 12:13:25 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/02/07 16:58:54 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,4 +77,20 @@ void			ft_lstdelone(t_list *lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void *));
 
+// Extras
+char	*ft_strcat(char *dest, char *src);
+char	*ft_strncat(char *dest, char *src, unsigned int nb);
+int	ft_strcmp(char *s1, char *s2);
+char	*ft_strstr(char *str, char *to_find);
+void	ft_putchar(int c);
+void	ft_swap(int *a, int *b);
+void	ft_putstr(char *str);
+int	ft_is_alpha(char *str);
+int	ft_is_lowercase(char *str);
+int	ft_is_numeric(char *str);
+int	ft_is_printable(char *str);
+int	ft_is_uppercase(char *str);
+char	*ft_strlowcase(char *str);
+char	*ft_strupcase(char *str);
+void	ft_putnbr(int nb);
 #endif /* LIBFT_H */
