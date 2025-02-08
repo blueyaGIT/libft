@@ -10,7 +10,9 @@ FPRINTF_DIR = $(INC_DIR)/fprintf
 GNL_DIR = $(INC_DIR)/get_next_line
 
 # List of source files (all in the parent directory 't1')
-LIBFT_SRCS =	ft_atoi.c \
+LIBFT_SRCS =	ft_abs.c \
+				ft_atof.c \
+				ft_atoi.c \
 				ft_bzero.c \
 				ft_calloc.c \
 				ft_fibonacci.c \

@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:03:11 by dalbano           #+#    #+#             */
-/*   Updated: 2025/02/08 16:04:24 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/02/08 16:10:13 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 # include <string.h>
 # include <unistd.h>
 
-//extra lib inclutions
+// extra lib inclutions
+# include "include/fprintf/ft_fprintf.h"
 # include "include/get_next_line/get_next_line.h"
 # include "include/printf/ft_printf.h"
-# include "include/fprintf/ft_fprintf.h"
 
 # define BUFF_SIZE 100
 
@@ -108,4 +108,6 @@ void				ft_sort_params_sort(int argc, char **argv);
 int					ft_sort_params_compareascii(char *str1, char *str2);
 int					*ft_range(int min, int max);
 char				*ft_strndup(const char *src, size_t n);
+int					ft_abs(int nb);
+double				ft_atof(const char *str);
 #endif /* LIBFT_H */
