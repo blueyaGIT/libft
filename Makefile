@@ -94,7 +94,6 @@ GNL_SRCS =		get_next_line.c \
 				get_next_line_utils_bonus.c
 
 FPRINTF_SRCS =	ft_fprintf.c \
-				ft_fprintf.h \
 				ft_fputchar_str.c \
 				ft_fputnbrs.c
 
