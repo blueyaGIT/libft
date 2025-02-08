@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:03:11 by dalbano           #+#    #+#             */
-/*   Updated: 2025/02/08 11:40:19 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/02/08 16:04:24 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 //extra lib inclutions
 # include "include/get_next_line/get_next_line.h"
 # include "include/printf/ft_printf.h"
+# include "include/fprintf/ft_fprintf.h"
 
 # define BUFF_SIZE 100
 
