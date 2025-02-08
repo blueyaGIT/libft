@@ -6,6 +6,7 @@ CFLAGS = -Wall -Wextra -Werror
 SRCS_DIR = ./srcs
 INC_DIR = ./include
 PRINTF_DIR = $(INC_DIR)/printf
+FPRINTF_DIR = $(INC_DIR)/fprintf
 GNL_DIR = $(INC_DIR)/get_next_line
 
 # List of source files (all in the parent directory 't1')
@@ -92,9 +93,14 @@ GNL_SRCS =		get_next_line.c \
 				get_next_line_utils.c \
 				get_next_line_utils_bonus.c
 
+FPRINTF_SRCS =	ft_fprintf.c \
+				ft_fprintf.h \
+				ft_fputchar_str.c \
+				ft_fputnbrs.c
 
 SRCS = $(addprefix $(SRCS_DIR)/, $(LIBFT_SRCS)) \
        $(addprefix $(PRINTF_DIR)/, $(PRINTF_SRCS)) \
+       $(addprefix $(FPRINTF_DIR)/, $(FPRINTF_SRCS)) \
        $(addprefix $(GNL_DIR)/, $(GNL_SRCS))
 
 # ---------- COLORS AND STUFF ---------- #
