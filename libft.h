@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:03:11 by dalbano           #+#    #+#             */
-/*   Updated: 2025/02/07 17:11:56 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/02/08 11:40:19 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,4 +106,5 @@ void				ft_sort_params_output(char *str);
 void				ft_sort_params_sort(int argc, char **argv);
 int					ft_sort_params_compareascii(char *str1, char *str2);
 int					*ft_range(int min, int max);
+char				*ft_strndup(const char *src, size_t n);
 #endif /* LIBFT_H */
