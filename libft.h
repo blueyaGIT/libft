@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:03:11 by dalbano           #+#    #+#             */
-/*   Updated: 2025/02/08 16:10:13 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/02/17 12:55:50 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,4 +110,5 @@ int					*ft_range(int min, int max);
 char				*ft_strndup(const char *src, size_t n);
 int					ft_abs(int nb);
 double				ft_atof(const char *str);
+void				ft_lstfree(t_list *lst);
 #endif /* LIBFT_H */

@@ -28,6 +28,7 @@ LIBFT_SRCS =	ft_abs.c \
 				ft_lstadd_front_bonus.c \
 				ft_lstclear_bonus.c \
 				ft_lstdelone_bonus.c \
+				ft_lstfree.c \
 				ft_lstiter_bonus.c \
 				ft_lstlast_bonus.c \
 				ft_lstmap_bonus.c \
