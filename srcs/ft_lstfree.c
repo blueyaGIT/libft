@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 12:55:32 by dalbano           #+#    #+#             */
-/*   Updated: 2025/02/17 12:59:30 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/02/17 13:00:14 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,4 @@ void	ft_lstfree(t_list *lst)
         free(lst);
         lst = tmp;
     }
-	lst = NULL;
 }
