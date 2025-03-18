@@ -47,33 +47,6 @@ make
 #include "libft/libft.h"
 ```
 
-For more information about the functions, see directly in the corresponding `header file` or for a quick description read the **Functions** section below.
-
-To find the appropriate `header file` see **Categories** below.
-
-## Categories
-
-Inside `libft` there are functions for all kinds of applications, so I have decided to divide them into different `header files`, to make finding the right function efficient and easy, as well as giving the option to include only the necessary functions.
-
-**The Categories are divided as follows:**
-
-- Functions for character manipulation, defined in `libft_char_manipulation.h`.
-- Functions for integer manipulation, defined in `libft_int_manipulation.h`.
-- Functions for manipulation of a `linked list`, defined together with the functions in `libft_lst_manipulation.h`.
-- Functions for dynamic memory allocation, defined in `libft_mem_allocation.h`.
-- Functions that check memory, defined in `libft_mem_checks.h`.
-- Functions for memory manipulation, defined in `libft_mem_manipulation.h`.
-- Functions that check a `string` ending in `0`, defined in `libft_str_checks.h`.
-- Functions to manipulate a `string`, defined in `libft_str_manipulation.h`.
-- Functions for checking the type of the provided value, defined in `libft_type_checks.h`.
-- Functions for writing different variables to a `file descriptor` provided to the function, defined in `libft_write_fd.h`.
-
-There are 3 additional `header files` to those previously described that are not a category per se, and are as follows
-
- - `ft_printf.h`: The `ft_printf()` function, being more complex than the previous ones, occupies its own `header file` for its operation.
- - `get_next_line_bonus.h`: `get_next_line()` is a version with the bonuses described in the `get_next_line` project of code school 42, hence all its related files include the `_bonus` suffix. As with `ft_printf()` being a complex function it requires its own `header file`.
- - `libft.h`: This `header file` is all the previous ones together in a single `header file` to be able to include all the functions comfortably.
-
 ## Functions
 
 The `libft` library includes the following functions (for more detailed information read the `header file`, it includes syntax, parameter description, notes, and more relevant information):
