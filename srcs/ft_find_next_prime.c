@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 03:30:28 by dalbano           #+#    #+#             */
-/*   Updated: 2025/02/07 17:01:33 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/03/19 16:54:04 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ int	ft_find_next_prime(int nb)
 	}
 	return (temp);
 }
-
 
 // #include <stdio.h>
 // int	main(void)
