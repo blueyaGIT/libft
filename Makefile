@@ -39,6 +39,7 @@ LIBFT_SRCS =	ft_abs.c \
 				ft_memcpy.c \
 				ft_memmove.c \
 				ft_memset.c \
+				ft_nodefree.c \
 				ft_print_params.c \
 				ft_putchar.c \
 				ft_putchar_fd.c \
