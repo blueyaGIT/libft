@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:03:11 by dalbano           #+#    #+#             */
-/*   Updated: 2025/03/20 15:16:10 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/03/22 16:24:38 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 char				*ft_strcat(char *dest, char *src);
 char				*ft_strncat(char *dest, char *src, unsigned int nb);
 int					ft_strcmp(char *s1, char *s2);
+char				*ft_strcpy(char *dest, char *src);
 char				*ft_strstr(char *str, char *to_find);
 void				ft_putchar(int c);
 void				ft_swap(int *a, int *b);

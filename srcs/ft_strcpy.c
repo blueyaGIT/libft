@@ -6,9 +6,11 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 20:33:24 by dalbano           #+#    #+#             */
-/*   Updated: 2024/04/14 18:47:11 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/03/22 16:24:06 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../libft.h"
 
 char	*ft_strcpy(char *dest, char *src)
 {
