@@ -6,11 +6,11 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:15:07 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/13 08:11:05 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/03/22 16:16:19 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <../libft.h>
 
 static int	get_num_length(int n)
 {
