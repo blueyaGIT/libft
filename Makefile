@@ -11,12 +11,14 @@ GNL_DIR = $(INC_DIR)/get_next_line
 
 # List of source files (all in the parent directory 't1')
 LIBFT_SRCS =	ft_abs.c \
+				ft_arr_cpy.c \
 				ft_atof.c \
 				ft_atoi.c \
 				ft_bzero.c \
 				ft_calloc.c \
 				ft_fibonacci.c \
 				ft_find_next_prime.c \
+				ft_free_arr.c \
 				ft_is_prime.c \
 				ft_isalnum.c \
 				ft_isalpha.c \
@@ -82,7 +84,7 @@ LIBFT_SRCS =	ft_abs.c \
 				ft_substr.c \
 				ft_swap.c \
 				ft_tolower.c \
-				ft_toupper.c 
+				ft_toupper.c \
 
 PRINTF_SRCS =	ft_utils.c \
 				ft_print_hex_nbr.c \
