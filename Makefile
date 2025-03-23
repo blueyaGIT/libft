@@ -20,6 +20,7 @@ LIBFT_SRCS =	ft_abs.c \
 				ft_fibonacci.c \
 				ft_find_next_prime.c \
 				ft_free_arr.c \
+				ft_free_ptr.c \
 				ft_is_prime.c \
 				ft_isalnum.c \
 				ft_isalpha.c \
