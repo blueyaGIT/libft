@@ -12,6 +12,7 @@ GNL_DIR = $(INC_DIR)/get_next_line
 # List of source files (all in the parent directory 't1')
 LIBFT_SRCS =	ft_abs.c \
 				ft_arr_cpy.c \
+				ft_arrlen.c \
 				ft_atof.c \
 				ft_atoi.c \
 				ft_bzero.c \

@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:03:11 by dalbano           #+#    #+#             */
-/*   Updated: 2025/03/22 18:05:45 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/03/23 13:06:04 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,4 +115,5 @@ void				ft_lstfree(t_list *lst);
 void				ft_nodefree(t_list *lst);
 char				**ft_arr_cpy(char **arr);
 void				ft_free_arr(char **arr);
+int					ft_arrlen(char **arr);
 #endif /* LIBFT_H */
