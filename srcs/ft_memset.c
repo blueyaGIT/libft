@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 10:26:30 by dalbano           #+#    #+#             */
-/*   Updated: 2024/11/19 12:13:41 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/03/24 13:33:42 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,11 @@ void	*ft_memset(void *s, int c, size_t n)
 	size_t			temp;
 
 	str = (unsigned char *)s;
-	temp = -1;
-	while (++temp < n)
+	temp = 0;
+	while (temp < n)
 	{
-		str[temp] = c;
+		str[temp] = (unsigned char)c;
+		temp++;
 	}
 	return (s);
 }
