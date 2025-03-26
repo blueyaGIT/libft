@@ -6,11 +6,11 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:50:11 by dalbano           #+#    #+#             */
-/*   Updated: 2025/02/07 16:58:47 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/03/26 14:39:09 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 void	ft_putnbr(int nb)
 {

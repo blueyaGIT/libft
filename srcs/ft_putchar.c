@@ -6,11 +6,11 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 10:32:02 by dalbano           #+#    #+#             */
-/*   Updated: 2025/02/07 16:53:17 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/03/26 14:39:09 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 void	ft_putchar(int c)
 {

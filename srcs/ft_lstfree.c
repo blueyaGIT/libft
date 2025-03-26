@@ -6,11 +6,11 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 12:55:32 by dalbano           #+#    #+#             */
-/*   Updated: 2025/03/19 16:54:24 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/03/26 14:39:09 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 void	ft_lstfree(t_list *lst)
 {

@@ -6,13 +6,15 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:03:11 by dalbano           #+#    #+#             */
-/*   Updated: 2025/03/26 14:00:25 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/03/26 14:30:24 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <fcntl.h>
+# include <limits.h>
+# include <stdbool.h>
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
@@ -119,4 +121,6 @@ int					ft_arrlen(char **arr);
 void				ft_free_ptr(void *temp);
 char				*ft_strncpy(char *dest, const char *src, unsigned int n);
 int					ft_isspace(int c);
+long long			ft_atoll(const char *str, bool *overflow);
+
 #endif /* LIBFT_H */

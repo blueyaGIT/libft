@@ -6,11 +6,11 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:33:16 by dalbano           #+#    #+#             */
-/*   Updated: 2025/02/07 17:07:21 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/03/26 14:39:09 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 int	*ft_range(int min, int max)
 {

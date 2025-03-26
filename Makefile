@@ -2,12 +2,13 @@
 NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-
 SRCS_DIR = ./srcs
 INC_DIR = ./include
+LIBFT_DIR = ./
 PRINTF_DIR = $(INC_DIR)/printf
 FPRINTF_DIR = $(INC_DIR)/fprintf
 GNL_DIR = $(INC_DIR)/get_next_line
+CFLAGS += -I$(LIBFT_DIR)
 
 # List of source files (all in the parent directory 't1')
 LIBFT_SRCS =	ft_abs.c \
@@ -15,6 +16,7 @@ LIBFT_SRCS =	ft_abs.c \
 				ft_arrlen.c \
 				ft_atof.c \
 				ft_atoi.c \
+				ft_atoll.c \
 				ft_bzero.c \
 				ft_calloc.c \
 				ft_fibonacci.c \

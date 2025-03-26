@@ -1,40 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoll.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/07 17:37:11 by dalbano           #+#    #+#             */
-/*   Updated: 2025/03/26 14:39:09 by dalbano          ###   ########.fr       */
+/*   Created: 2025/03/26 14:16:56 by dalbano           #+#    #+#             */
+/*   Updated: 2025/03/26 14:38:18 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+static long long	is_overflowing(long long result, char next_digit, int sign)
 {
-	int	sign;
-	int	result;
-	int	sign_count;
+	if (sign == 1 && result > (LLONG_MAX - (next_digit - '0')) / 10)
+		return (LLONG_MAX);
+	if (sign == -1 && result > (LLONG_MIN + (next_digit - '0')) / -10)
+		return (LLONG_MIN);
+	return (0);
+}
+
+
+long long	ft_atoll(const char *str, bool *overflow)
+{
+	int			sign;
+	long long	result;
 
 	sign = 1;
 	result = 0;
-	sign_count = 0;
+	*overflow = false;
 	while (*str == ' ' || (*str >= '\t' && *str <= '\r'))
 		str++;
-	while (*str == '+' || *str == '-')
+	if (*str == '+' || *str == '-')
 	{
-		if (++sign_count > 1)
-			return (0);
 		if (*str == '-')
 			sign = -1;
 		str++;
 	}
 	while (*str >= '0' && *str <= '9')
 	{
+		if (is_overflowing(result, *str, sign) != 0)
+			return (*overflow = true, is_overflowing(result, *str, sign));
 		result = result * 10 + (*str - '0');
 		str++;
 	}
+	if (*str != '\0' && !(*str == ' ' || (*str >= '\t' && *str <= '\r')))
+		*overflow = true;
+
 	return (sign * result);
 }
