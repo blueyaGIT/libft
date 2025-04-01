@@ -56,6 +56,7 @@ LIBFT_SRCS =	ft_abs.c \
 				ft_putstr.c \
 				ft_putstr_fd.c \
 				ft_range.c \
+				ft_realloc.c \
 				ft_recursive_factorial.c \
 				ft_recursive_power.c \
 				ft_sort_params.c \
