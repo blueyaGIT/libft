@@ -6,40 +6,43 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 15:59:16 by dalbano           #+#    #+#             */
-/*   Updated: 2025/04/01 15:59:24 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/04/01 16:07:53 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
- * ft_realloc - Reallocates memory block to a new size.
+/*
+ * ft_realloc manually resizes the memory block pointed by ptr to size bytes.
+ * It assumes that a header (of type size_t) was stored immediately before ptr
+ * that contains the size of the allocated block.
  *
- * This function allocates a new memory block of size new_size, copies the content
- * from the old memory block (up to the smaller of old_size or new_size), frees the 
- * old memory block, and returns a pointer to the new block.
- *
- * @param ptr: Pointer to the memory block previously allocated.
- * @param old_size: The size of the memory block pointed to by ptr.
- * @param new_size: The new size for the memory block.
- *
- * @return A pointer to the newly allocated memory block, or NULL if allocation fails.
+ * If ptr is NULL, behaves like malloc(size).
+ * If size is 0, frees ptr and returns NULL.
  */
-void	*ft_realloc(void *ptr, size_t old_size, size_t new_size)
+void    *ft_realloc(void *ptr, size_t size)
 {
-    void	*new_ptr;
+    void    *new_ptr;
+    size_t  old_size;
+    size_t  copy_size;
 
     if (!ptr)
-        return (malloc(new_size));
-    if (new_size == 0)
+        return (malloc(size));
+    if (size == 0)
     {
         free(ptr);
         return (NULL);
     }
-    new_ptr = malloc(new_size);
+
+    old_size = *((size_t *)ptr - 1);
+    new_ptr = malloc(size);
     if (!new_ptr)
         return (NULL);
-    ft_memcpy(new_ptr, ptr, (old_size < new_size ? old_size : new_size));
+	if (old_size < size)
+        copy_size = old_size;
+    else
+        copy_size = size;
+    ft_memcpy(new_ptr, ptr, copy_size);
     free(ptr);
     return (new_ptr);
 }
