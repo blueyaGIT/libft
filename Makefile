@@ -67,6 +67,8 @@ LIBFT_SRCS =	ft_abs.c \
 				ft_str_is_numeric.c \
 				ft_str_is_printable.c \
 				ft_str_is_uppercase.c \
+				ft_str_to_arr_back.c \
+				ft_str_to_arr_front.c \
 				ft_strcat.c \
 				ft_strchr.c \
 				ft_strcmp.c \
@@ -140,7 +142,7 @@ $(NAME): $(OBJS)
 .c.o:
 	@$(eval CURRENT := $(shell echo $$(($(CURRENT) + 1))))
 	@$(eval PERCENT := $(shell echo $$(($(CURRENT) * 100 / $(TOTAL_SRCS)))))
-	@printf "$(CLEAR_LINE)$(YELLOW)🚧 Compiling $(PERCENT)%% [$(CURRENT)/$(TOTAL_SRCS)] $(CYAN)$<$(NC) 🚧"
+	@printf "$(CLEAR_LINE)$(YELLOW)🚧 Compiling $(PERCENT)%% [$(CURRENT)/$(TOTAL_SRCS)] $(CYAN)$<$(NC) 🚧 "
 	@$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
 
 # Clean object files and libraries
