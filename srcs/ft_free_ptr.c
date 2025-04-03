@@ -6,17 +6,17 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 13:36:59 by dalbano           #+#    #+#             */
-/*   Updated: 2025/03/26 14:39:09 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/04/03 10:58:45 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_free_ptr(void *temp)
+void	ft_free_ptr(void **ptr)
 {
-	if (temp)
-	{
-		free(temp);
-		temp = NULL;
-	}
+	if (ptr && *ptr)
+    {
+        free(*ptr);
+        *ptr = NULL;
+    }
 }
