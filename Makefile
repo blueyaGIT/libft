@@ -56,6 +56,7 @@ LIBFT_SRCS =	ft_abs.c \
 				ft_putstr.c \
 				ft_putstr_fd.c \
 				ft_range.c \
+				ft_realloc.c \
 				ft_recursive_factorial.c \
 				ft_recursive_power.c \
 				ft_sort_params.c \
@@ -66,6 +67,8 @@ LIBFT_SRCS =	ft_abs.c \
 				ft_str_is_numeric.c \
 				ft_str_is_printable.c \
 				ft_str_is_uppercase.c \
+				ft_str_to_arr_back.c \
+				ft_str_to_arr_front.c \
 				ft_strcat.c \
 				ft_strchr.c \
 				ft_strcmp.c \
