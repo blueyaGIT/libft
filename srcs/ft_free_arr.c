@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 17:26:27 by dalbano           #+#    #+#             */
-/*   Updated: 2025/03/26 14:39:09 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/04/03 11:08:54 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,15 @@ void	ft_free_arr(char **arr)
 {
 	int	i;
 
+	if (!arr || !*arr)
+		return;
 	i = 0;
-	while (arr[i])
+	while ((*arr)[i])
 	{
-		free(arr[i]);
+		free((*arr)[i]);
+		(*arr)[i] = NULL;
 		i++;
 	}
-	free(arr);
+	free(*arr);
+	*arr = NULL;
 }
