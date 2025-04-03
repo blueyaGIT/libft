@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:03:11 by dalbano           #+#    #+#             */
-/*   Updated: 2025/04/03 11:10:19 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/04/03 11:12:31 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,7 +116,7 @@ double				ft_atof(const char *str);
 void				ft_lstfree(t_list *lst);
 void				ft_nodefree(t_list *lst);
 char				**ft_arr_cpy(char **arr);
-void				ft_free_arr(char ***arr);
+void				ft_free_arr(char **arr);
 int					ft_arrlen(char **arr);
 void				ft_free_ptr(void *temp);
 char				*ft_strncpy(char *dest, const char *src, unsigned int n);
