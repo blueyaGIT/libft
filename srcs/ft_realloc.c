@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 15:59:16 by dalbano           #+#    #+#             */
-/*   Updated: 2025/04/01 16:07:53 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/04/07 12:19:45 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void    *ft_realloc(void *ptr, size_t size)
 
     if (!ptr)
         return (malloc(size));
-    if (size == 0)
+    else if (size == 0)
     {
         free(ptr);
         return (NULL);
