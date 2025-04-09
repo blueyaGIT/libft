@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 15:59:16 by dalbano           #+#    #+#             */
-/*   Updated: 2025/04/09 09:58:44 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/04/09 10:00:27 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ static void	helper_func(size_t old_size, size_t new_size, size_t *copy_size)
 		*copy_size = new_size;
 	}
 }
-
 
 /*
  * ft_realloc manually resizes the memory block pointed by ptr to size bytes.
