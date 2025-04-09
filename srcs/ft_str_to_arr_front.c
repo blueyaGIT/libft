@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 16:06:03 by dalbano           #+#    #+#             */
-/*   Updated: 2025/04/09 16:30:31 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/04/09 16:33:01 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,6 @@ char **ft_str_to_array_front(char **array, char *str)
 		i++;
 	}
 	new_array[i] = NULL;
-	free(array);
+	ft_free_arr(array);
 	return (new_array);
 }
