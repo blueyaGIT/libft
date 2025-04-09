@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 16:06:03 by dalbano           #+#    #+#             */
-/*   Updated: 2025/04/02 16:07:33 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/04/09 16:30:31 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,23 +26,24 @@
  */
 char **ft_str_to_array_front(char **array, char *str)
 {
-    size_t count = 0;
-    char **new_array;
-    size_t i;
+    int		len;
+	char	**new_array;
+	int		i;
 
-    if (array)
-    {
-        while (array[count])
-            count++;
-    }
-    new_array = ft_realloc(array, sizeof(char *) * (count + 2));
-    if (!new_array)
-        return (NULL);
-    for (i = count; i > 0; i--)
-        new_array[i] = new_array[i - 1];
-    new_array[0] = ft_strdup(str);
-    if (!new_array[0])
-        return (NULL);
-    new_array[count + 1] = NULL;
-    return (new_array);
+	len = 0;
+	i = 1;
+	while (array && array[len])
+		len++;
+	new_array = malloc(sizeof(char *) * (len + 2));
+	if (!new_array)
+		return (NULL);
+	new_array[0] = ft_strdup(str);
+	while (i <= len)
+	{
+		new_array[i] = ft_strdup(array[i - 1]);
+		i++;
+	}
+	new_array[i] = NULL;
+	free(array);
+	return (new_array);
 }
