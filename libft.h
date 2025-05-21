@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:03:11 by dalbano           #+#    #+#             */
-/*   Updated: 2025/04/03 11:12:31 by dalbano          ###   ########.fr       */
+/*   Updated: 2025/05/21 13:32:19 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,4 +125,5 @@ long long			ft_atoll(const char *str, bool *overflow);
 void				*ft_realloc(void *ptr, size_t size);
 char				**ft_str_to_array_back(char **array, char *str);
 char				**ft_str_to_array_front(char **array, char *str);
+long				ft_atol(const char *str);
 #endif /* LIBFT_H */
